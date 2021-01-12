@@ -32,6 +32,7 @@ open class AssetsPhotoViewController: UIViewController {
     var previousPreheatRect: CGRect = .zero
     
     let shouldBeginMultipleSelectionInteractionAt: Bool = false
+    let shouldHighlightItemAt: Bool = false
     
     lazy var cancelButtonItem: UIBarButtonItem = {
         let buttonItem = UIBarButtonItem(barButtonSystemItem: .cancel,

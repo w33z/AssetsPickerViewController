@@ -11,22 +11,24 @@ import Photos
 
 // MARK: - UICollectionViewDelegate
 extension AssetsPhotoViewController: UICollectionViewDelegate {
-    @available(iOS 13.0, *)
-    public func collectionView(_ collectionView: UICollectionView, shouldBeginMultipleSelectionInteractionAt indexPath: IndexPath) -> Bool {
-        return shouldBeginMultipleSelectionInteractionAt
-    }
+    // TURN OFF SWIPE SELECTING
     
-    public func collectionView(_ collectionView: UICollectionView, didBeginMultipleSelectionInteractionAt indexPath: IndexPath) {
-        isDragSelectionEnabled = true
-    }
-    
-    public func collectionViewDidEndMultipleSelectionInteraction(_ collectionView: UICollectionView) {
-        isDragSelectionEnabled = false
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
+//    @available(iOS 13.0, *)
+//    public func collectionView(_ collectionView: UICollectionView, shouldBeginMultipleSelectionInteractionAt indexPath: IndexPath) -> Bool {
+//        return shouldBeginMultipleSelectionInteractionAt
+//    }
+//
+//    public func collectionView(_ collectionView: UICollectionView, didBeginMultipleSelectionInteractionAt indexPath: IndexPath) {
+//        isDragSelectionEnabled = true
+//    }
+//
+//    public func collectionViewDidEndMultipleSelectionInteraction(_ collectionView: UICollectionView) {
+//        isDragSelectionEnabled = false
+//    }
+//
+//    public func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+//        return shouldHighlightItemAt
+//    }
     
     public func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         if LogConfig.isSelectLogEnabled { logi("shouldSelectItemAt: \(indexPath.row)") }
