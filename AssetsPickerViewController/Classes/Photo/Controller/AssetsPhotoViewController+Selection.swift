@@ -13,7 +13,7 @@ import Photos
 extension AssetsPhotoViewController: UICollectionViewDelegate {
     @available(iOS 13.0, *)
     public func collectionView(_ collectionView: UICollectionView, shouldBeginMultipleSelectionInteractionAt indexPath: IndexPath) -> Bool {
-        return true
+        return shouldBeginMultipleSelectionInteractionAt
     }
     
     public func collectionView(_ collectionView: UICollectionView, didBeginMultipleSelectionInteractionAt indexPath: IndexPath) {
